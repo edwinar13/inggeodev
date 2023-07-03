@@ -1,0 +1,242 @@
+{% extends "layoutHome.html" %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{{ url_for('static',filename='css/home.css') }}">
+<script src="{{ url_for('static',filename='js/home.js') }}"></script>
+
+
+
+
+<article class="article-container">
+
+
+  <!--logo
+  <section class="section-inicio">
+    <div class="container">
+      <div class="section-inicio_logo">
+        <img src="{{ url_for('static',filename='img/logoProy-1.png') }}" alt="">
+        <h2 class="text notranslate">in<b class="notranslate">gg</b>eo-proy</h2>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!--logo-->
+  <section class="sectionFavorites">
+    <h5>Favoritos</h5>
+    <div class="container">
+
+
+      {% for registro in registros%}
+      {% if registro.favorites == 1 %}
+
+      <a href="#">
+        <div class="item" id={{registro.id}}>
+
+          <div class="item-0">
+
+          </div>
+
+          <div class="item-1">
+            <p>{{registro.name}}</p>
+          </div>
+
+          <div class="item-2">
+            <div class="favorites"></div>
+          </div>
+
+          <div class="item-3">
+            <p>{{registro.localization}}</p>
+            <p>0 perforaciones</p>
+            <p>{{registro.date_}}</p>
+          </div>
+
+
+
+
+        </div>
+      </a>
+      {% endif %}
+      {% endfor %}
+
+
+
+    </div>
+  </section>
+
+
+
+  <!--Nuevo Proyectos-->
+  <div class="section-NewProject" id="NewProjec">
+    <div class="container">
+      <form class="form" method="POST" action="/newProjectPost" id="formulario">
+        <label for=""> Nombre:</label>
+        <input type="text" id="nombre" name="nombre" autocomplete="off" placeholder="Ingresa el nombre del proyecto"
+          autofocus="">
+        <label for="">Localización</label>
+        <input type="text" id="localizacion" name="localizacion" autocomplete="off"
+          placeholder="Ingresa la localización del proyecto">
+        <div class="buttons">
+
+          <button>Guardar</button>
+          <p onclick="newProjectCancel()">✖</p>
+        </div>
+        <label for="">* Todos los campos son obligatorios</label>
+      </form>
+    </div>
+  </div>
+
+
+
+
+
+
+  <!--Proyectos-->
+  <div class="section-Project">
+    <h5>Todos lo registros</h5>
+    <div class="container">
+      <div class="buscar">
+        <button class="button" id="btnNewProjec" onclick="newProject()">Proyecto nuevo</button>
+        <input class="inp" id="inp" type="text" name="buscarProyecto" onkeyup="searchProject()"
+          placeholder="Filtrar por nombre">
+        <input class="checkB" id="cbFilterLoc" onclick="checkSearchProject()" type="checkbox">
+
+      </div>
+      <div class="itemsProyectos">
+
+        <ul id="ulProjects">
+
+          {% for registro in registros%}
+          <li>
+            <a href="#">
+              <div class="item" id={{registro.id}}>
+                <div class="item-1">
+                  <p>{{registro.name}}</p>
+                </div>
+                <div class="item-2">
+                  <p> <span>{{registro.localization}}</span> / 0 perforaciones / {{registro.date_}} </p>
+
+                </div>
+                <div class="item-3">
+                  {% if registro.favorites == 1 %}
+                  <div class="favorites" id="favorites{{registro.id}}" onclick="favoritesValide(this.id)"></div>
+                  {% elif registro.favorites == 0 %}
+                  <div class="not_favorites" id="not_favorites{{registro.id}}" onclick="favoritesValide(this.id)"></div>
+                  {% else %}
+                  {% endif %}
+
+                  <label class="switchFavorites">
+                    {% if registro.favorites == 1 %}
+                    <input type="checkbox" id="favorites{{registro.id}}" onclick="favoritesValide(this.id)"
+                      checked="checked">
+                    {% elif registro.favorites == 0 %}
+                    <input type="checkbox" id="favorites{{registro.id}}" onclick="favoritesValide(this.id)">
+
+                    {% else %}
+                    {% endif %}
+
+                    <span class="slider round"></span>
+                  </label>
+
+                </div>
+              </div>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+
+
+      </div>
+    </div>
+
+
+
+
+    <div class="ocultar">
+
+
+
+      <!--menu principal-->
+      <section class="section-menu">
+
+        <div class="card">
+          <a href="proyectos.html">
+            <img src="{{ url_for('static',filename='img/home/icon_proyecto.png') }}" alt="">
+            <h4 class="text">Proyectos</h4>
+            <p class="text"> Usuarios </p>
+          </a>
+
+        </div>
+        <div class="card">
+          <a href="#">
+            <img src="{{ url_for('static',filename='img/home/icon_reporte.png') }}" alt="">
+            <h4 class="text"> Reportes</h4>
+            <p class="text"> Analista </p>
+          </a>
+
+        </div>
+        <div class="card">
+          <a href="#">
+            <img src="{{ url_for('static',filename='img/home/icon_configuracion.png') }}" alt="">
+            <h4 class="text"> Configuración</h4>
+            <p class="text"> Administrador </p>
+          </a>
+
+        </div>
+        <div class="card card-end">
+          <a href="#">
+            <img src="{{ url_for('static',filename='img/home/icon_ayuda.png') }}" alt="">
+            <h4 class="text">Ayuda</h4>
+            <p class="text">... </p>
+          </a>
+
+        </div>
+
+
+      </section>
+    </div>
+
+
+</article>
+
+
+<div class="ocultar">
+
+  <h1 class="title">
+    Welcome, {{ name }}!
+  </h1>
+  <h2 class="title">
+    {{ email }}!
+  </h2>
+
+  <h2 class="dd">
+    Blueprint: {{ request.blueprint }}
+  </h2>
+  <h2 class="dd">
+    Template Reference context name: {{ self._TemplateReference__context.name }}
+  </h2>
+  <h2 class="dd">
+    Endpoint : {{ request.endpoint }}
+  </h2>
+  <h2 class="dd">
+    Path: {{ request.path }}
+  </h2>
+
+
+
+  <form action="/uploadDoc" method="POST" enctype="multipart/form-data">
+    <input type="file" name="archivo">
+    <input type="submit">
+  </form>
+
+  <br><br><br>
+  <form action="/dowloadDoc">
+    <a href="path/Archivos_PDF/D_6637-D_6637M-15.pdf"> descargar</a>
+  </form>
+
+</div>
+
+
+
+{% endblock %}

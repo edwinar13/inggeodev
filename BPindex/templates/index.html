@@ -1,0 +1,378 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{{ url_for('static',filename='css/index.css') }}">
+<script src="{{ url_for('static',filename='js/index.js') }}"></script>
+
+<article class="article-container">
+
+
+
+
+  <!--inicio-->
+  <section class="section-inicio">
+
+    <div class="section-inicio_logo">
+      <p class="subText">01101001 01101110 01100111 01100111 01100101 01101111 01100100 01100101 01110110</p>
+      <h2 class="text">
+        <span class="notranslate">&lt</span>{ in<b class="notranslate">g</b>-<b class="notranslate">g</b>eo.dev }<span class="notranslate">&gt</span>
+      </h2>
+    </div>
+  </section>
+
+
+
+
+
+  <!--nosotros-->
+  <section id="section-nosotros" class="section-nosotros">
+
+
+    <div class="section-nosotros_card">
+      <div class="section-nosotros_card-img">
+        <img src="static/img/Logo-2.ico" alt="">
+        <h2 class=" section-nosotros_title"> ACERCA DE NOSOTROS</h2>
+      </div>
+      <div class="section-nosotros_card-text">
+        <p>Inggeodev es una compañía 100% colombiana de soluciones informáticas en el campo de la ingeniería civil, que
+          nace de las necesidades de software relacionado a la gestión de información de exploraciones geotecnias, así
+          como de la necesidad de software específico de bajo costo que permite aumentar la productividad.
+          <br>
+          <br>
+          En el año 2015 el CEO de la compañía tras 2 años de experiencia en la ingeniería geotécnica, crea el primer
+          micro programa en el lenguaje de programación VBA for Excel, que redujo considerablemente los tiempos de
+          procesamiento de información geotécnica. En el año 2016 se extiende la funcionalidad permitiendo el dibujo
+          automático en software CAD, de nuevo reduciendo considerablemente los tiempos en tareas repetitivas. Entre el
+          año 2016 y 2020 se explora otras tecnologías informáticas como JAVA, C++, Arduino y Python que abren un mundo
+          de posibilidades para ser aplicadas en la ingeniería civil, en el año 2021 se crea la compañía <span class="notranslate">
+            in<b>gg</b>eodev</span> la
+          cual recopila la experiencia a lo largo de 8 años y la pone a disposición de nuestros clientes.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+  <!--Productos-->
+  <div id="section-productos"></div>
+  <section class="section-productos">
+    <div class="section-productos_container">
+
+      <div class="section-productos_title">
+        <h2>PRODUCTOS Y SERVICIOS</h2>
+      </div>
+
+
+      <div class="card section-servicios_cloud">
+        <div class="img_container">
+          <img src="{{ url_for('static',filename='img/logoSoft-1.png')  }}" alt="">
+        </div>
+        <h4 class="notranslate" >in<span>gg</span>eo-soft</h4>
+        <p>
+          Quieres automatizar el procesamiento de información o realizar dibujo CAD automatizado
+
+        </p>
+        <a href="/#section-servicios-esc"> Conocer más </a>
+      </div>
+      <div class="card section-servicios_grup">
+        <div class="img_container">
+          <img src="{{ url_for('static',filename='img/logoProy-1.png')  }}" alt="">
+        </div>
+        <h4 class="notranslate">in<span>gg</span>eo-proy</h4>
+        <p>
+          Gestiona online toda la información de exploraciones geotécnicas y ensayos de laboratorio
+        </p>
+        <a href="/#section-servicios"> Conocer más </a>
+      </div>
+      <div class="card section-servicios_reports">
+        <div class="img_container">
+          <img src="{{ url_for('static',filename='img/logoExp-1.png')  }}" alt="">
+        </div>
+        <h4 class="notranslate">in<span>gg</span>eo-exp</h4>
+        <p>
+          Has que tu vida en campo sea más productiva y únete a la Industria 4.0
+        </p>
+        <a href="#"> Próximamente </a>
+      </div>
+      <div class="card section-servicios_reports">
+        <div class="img_container">
+          <img src="{{ url_for('static',filename='img/logoLab-1.png')  }}" alt="">
+        </div>
+        <h4 class="notranslate">in<span>gg</span>eo-lab</h4>
+        <p>
+          Gestiona de manera adecuada los resultados de ensayos de laboratorio
+        </p>
+        <a href="#"> Próximamente </a>
+      </div>
+    </div>
+  </section>
+
+  <!--servicios de escritorio-->
+  <section id="section-servicios-esc" class="section-servicios-esc">
+    <div class="container">
+      <div class="title">
+        <h2>SOLUCIONES DE ESCRITORIO</h2>
+      </div>
+      <div class="intro">
+        <div class="card-img">
+          <img src="static/img/Index/Fig-index_3.png" alt="">
+        </div>
+        <div class="card-text">
+          <div>
+            <p>
+              inggeo-soft es un servicio de desarrollo de micro aplicaciones, dirigido a empresas de consultoría de
+              ingeniería civil en general, que quieren mejorar sus procesos internos en tareas repetitivas, como:
+
+            </p>
+          </div>
+          <div>
+
+            <ol class="ol_ser_escritorio">
+              <li class="">Mejoramiento de hojas de cálculo </li>
+              <li class="">Creación de hojas de cálculo avanzadas </li>
+              <li class="">Dibujo automático en AutoCAD </li>
+              <li class="">Scripts de Python para cálculos especializados </li>
+              <li>Automatización de tareas informáticas </li>
+            </ol>
+
+
+          </div>
+
+        </div>
+
+
+
+      </div>
+      <div class="view">
+        <img src="{{ url_for('static',filename='img/Index/Fig-index-view.gif')  }}" alt="">
+      </div>
+
+    </div>
+  </section>
+
+
+  <!--servicios en la nube-->
+  <section id="section-servicios" class="section-servicios">
+    <div class="section-servicios_container">
+
+      <div class="section-servicios_title">
+        <h2>SERVICIOS EN LA NUBE</h2>
+      </div>
+      <div class="section-servicios_intro">
+
+        <div class="section-servicios_intro-card">
+
+          <div class="section-servicios_intro-card-text">
+            <p>
+              Inggeo-proy es un servicio en la nube, que permite mantener los resultados de exploraciones geotécnicas
+              disponibles en cualquier momento, centralizada en un solo lugar para evitar duplicación de información.
+              Puede obtener estadísticas y reportes de sus datos registrados para tener un mayor control en la ejecución
+              de la exploración y ensayos en laboratorio. En pocos pasos puedes registrar proyectos, perforación y
+              resultados de laboratorio, así como realizar programaciones de ensayos en formatos personalizados. El
+              servicio se presta para un usuario tipo Administrador con acceso total a la aplicación y tres usuarios con
+              acceso restringido según permisos del administrador, adicionalmente usuarios ilimitados para visualización
+              de información registrada.
+
+            </p>
+          </div>
+          <div class="section-servicios_intro-card-img">
+            <img src="static/img/Index/Fig-index_2.png" alt="">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="card section-servicios_cloud">
+        <img src="static/img/Index/Fig-index-cloud.png" alt="">
+        <h2>Cloud Data</h2>
+        <p>
+          Consulta información en cualquier momento y lugar
+        </p>
+      </div>
+      <div class="card section-servicios_grup">
+        <img src="static/img/Index/Fig-index-group-1.png" alt="">
+        <h2>Workgroup</h2>
+        <p>
+          Gestiona el acceso a la información, para grupos multidisciplinarios
+        </p>
+      </div>
+      <div class="card section-servicios_reports">
+        <img src="static/img/Index/Fig-index-reporte.png" alt="">
+        <h2>Reports</h2>
+        <p>
+          Controla el proceso de investigación geotécnica con estadísticas
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!--equipo-->
+  <section id="section-equipo" class="section-equipo">
+    <div class="section-equipo_container">
+      <div class=" section-equipo_title">
+
+        <h2 class="text">EQUIPO</h2>
+
+      </div>
+
+      <div class="card section-equipos_cloud">
+        <img src="static/img/Index/edwin_arevalo.jpg" alt="">
+        <h2>Ing. MSc. en geotecnia Edwin Arevalo <br> <span>Universidad Nacional de colombia</span> </h2>
+
+
+        <p class="text">
+          Ingeniero civil con más de 8 años de experiencia en el procesamiento
+          de datos de exploraciones geotécnicas y ensayos de laboratorios, amplio
+          conocimiento en diseños de cimentaciones superficiales y profundas,
+          estabilidad de taludes. Mi principal virtud es generar soluciones
+          informáticas acordes a mi profesión que permiten mejorar mi productividad.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+
+
+  <!--contactenos-->
+  <section id="section-contactenos" class="section-contactenos">
+    <div class="section-contactenos_container">
+      <div class="section-contactenos_card">
+
+        <div class="section-contactenos_sup">
+          <p>
+            <span class="text-1">• </span>
+            <span class="text-2">• </span>
+            <span class="text-3">• </span>
+          </p>
+        </div>
+        <div class=" section-contactenos_title">
+          <div class=" section-contactenos_title-info">
+            <h2 class="text">INFORMACÍON <br>DE CONTACTO <br>¯¯¯</h2>
+            <p> <b> CONTACT INFO </b></p>
+            <p> <b> Tel: +57-311 899 4279 <br>Email: inggeodev@gmail.com </b></p>
+          </div>
+        </div>
+
+        <form class="section-contactenos_form" method="POST" action="/contactPost">
+          <div class="section-contactenos__user-info">
+
+            <input type="text" name="name" placeholder="NOMBRES">
+            <input type="text" name="phone" placeholder="TELEFONO">
+            <input type="email" name="email" placeholder="CORREO">
+            <textarea placeholder="MENSAJE" name="message"></textarea>
+            <button onclick="alertIndex()">Enviar mensaje</button>
+            <!--
+            <input type="button" value="Enviar mensaje" id="btn-enviar">
+            -->
+
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+
+</article>
+
+
+
+
+<!--FOTTER-->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-containerOne">
+      <div class="footer-container_IGSL">
+        <img src="{{ url_for('static',filename='img/Logo-1.ico')  }}" alt="">
+        <a href="{{ url_for('indexPage.index') }}" class="footer-logo">
+          <b class="notranslate">in</b><span>gg</span><b>eodev</b>
+        </a>
+      </div>
+      <div class="footer-container_text">
+        <p>
+          Soluciones informáticas especializadas en geotecnia que te permiten
+          estar a la vanguardia, en un mundo tecnológico
+        </p>
+        <br><br>
+        <p> Síguenos en nuestras redes: </p>
+      </div>
+      <div class="footer-container_redes">
+        <div> <img src="{{ url_for('static',filename='img/Footer/_whatsapp.png')  }}" alt=""
+            class="whatsapp red-social">
+        </div>
+        <div> <img src="{{ url_for('static',filename='img/Footer/_facebook.png')  }}" alt=""
+            class="facebook red-social">
+        </div>
+        <div> <img src="{{ url_for('static',filename='img/Footer/_youtube-1.png')  }}" alt=""
+            class="twitter red-social">
+        </div>
+      </div>
+    </div>
+    <div class="footer-containerTwo">
+      <div><a class="footer-a" href="/#"> <span>Inicio</span> </a></div>
+      <div><a class="footer-a" href="/#section-nosotros"> <span>Nosotros</span> </a></div>
+      <div><a class="footer-a" href="/#section-servicios"> <span>Servicios</span></a></div>
+      <div><a class="footer-a" href="/#section-equipo"> <span>Equipo</span> </a></div>
+      <div><a class="footer-a" href="/#section-contactenos"> <span>Contactenos</span> </a></div>
+    </div>
+    <div class="footer-containerThree">
+      <div class="contend">
+        <div class="subContend">
+          <img class="img-1" src="{{ url_for('static',filename='img/logoSoft-1.png')  }}" alt="">
+          <p class="notranslate">in<span>gg</span>eo-soft</p>
+        </div>
+        <div class="subContend">
+          <img class="img-1" src="{{ url_for('static',filename='img/logoProy-1.png')  }}" alt="">
+          <p class="notranslate">in<span>gg</span>eo-proy</p>
+        </div>
+
+        <div class="subContend">
+          <img class="img-2" src="{{ url_for('static',filename='img/logoExp-1.png')  }}" alt="">
+          <p class="notranslate">in<span>gg</span>eo-exp</p>
+        </div>
+        <div class="subContend">
+          <img class="img-3" src="{{ url_for('static',filename='img/logoLab-1.png')  }}" alt="">
+          <p class="notranslate">in<span>gg</span>eo-lab</p>
+        </div>
+      </div>
+
+      <div class="contend">
+        {% if not current_user.is_authenticated %}
+        <div class="footer-containerThree-card">
+          <a href="{{ url_for('authPage.login') }}">
+            Login
+          </a>
+        </div>
+
+        <div class="footer-containerThree-card">
+          <a href="{{ url_for('authPage.signup') }}">
+            Sign Up
+          </a>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="footer-containerFour">
+      <div>
+        <p class="notranslate">in<span>gg</span>eodev &copy; 2021 - All rights reserved. </p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+{% endblock %}

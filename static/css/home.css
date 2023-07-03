@@ -1,0 +1,564 @@
+
+
+/*******************************/
+/**********  ARTICLE  **********/
+/*******************************/
+
+.article-container{  
+ 
+    width: 100%;
+    padding-top: 50px;
+}
+
+
+
+
+/*********************************/
+/**********  favoritos  **********/
+/*********************************/
+
+
+/*   items   */
+
+.sectionFavorites h5{
+    margin: 20px 8% 10px 8%;
+    color: rgb(170, 170, 170);
+
+}
+.sectionFavorites .container{    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px 8%;
+}
+
+.sectionFavorites .item{    
+    
+    margin: 5px 5px;
+    width: 300px;
+    height: 100px;    
+    border: 1px solid rgba(107, 107, 107, 0.2);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+
+
+    
+}
+.sectionFavorites a, p{    
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.sectionFavorites #ulProjects{  
+list-style-type: none;
+}
+
+.sectionFavorites .item-0{
+  background: rgb(93, 214, 208);
+  grid-row: 1 / 3;
+  width: 100%;
+  height: 100%;    
+  border-radius: 5px 0 0 5px ;
+}
+
+.sectionFavorites .item-1{
+    margin-right: auto;
+    font-size: 15px;
+    font-weight: 700;
+    margin: auto 15px;
+    
+}
+.sectionFavorites .item-2{
+    
+    margin: auto;
+ }
+
+ .sectionFavorites .item-3{   
+    font-size: 13px; 
+   grid-column: 2 / 4;
+   margin: auto 10px;
+   
+ }
+ 
+ .sectionFavorites .favorites{
+    height: 20px;
+    width: 20px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    background-color: rgb(255, 111, 0); 
+    margin: auto; 
+}
+.sectionFavorites .favorites:hover{
+  background-color: rgb(170, 170, 170);
+  
+}
+.sectionFavorites .not_favorites{
+    height: 20px;
+    width: 20px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    background-color: rgb(170, 170, 170); 
+    margin: auto; 
+}
+.sectionFavorites .not_favoritest:hover{
+    background-color: rgb(255, 111, 0); 
+    
+  }
+
+.sectionFavorites .item:hover{  
+    background: rgba(214, 214, 214, 0.2);
+    border-bottom: 0px solid rgba(107, 107, 107, 0.5);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/***************************************/
+/**********  Nuevo Proyectos  **********/
+/***************************************/
+       
+.section-NewProject {
+    /*display: none;*/
+    opacity: 0;
+    height: 0;
+    transform: scale(0);
+    transition: 1.0s ease opacity,1.0s ease transform;
+}  
+
+.section-NewProject .container{
+    display: flex;   
+    justify-content: space-evenly;
+    align-items: center; 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}  
+.section-NewProject .form{
+    display: flex;   
+    flex-direction: column;
+    margin: 30px 0 30px 0; 
+}  
+
+.section-NewProject .form label{
+    margin-bottom: 5px;
+}
+.section-NewProject .form input{
+    padding: 8px;
+    width: 500px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+} 
+
+.section-NewProject .buttons{
+    display: flex;   
+    flex-direction: row;
+    justify-content: space-between;
+    
+}  
+
+.section-NewProject .form button{
+    width: 150px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    background: #209cee;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    
+}
+.section-NewProject .form p{
+    width: 40px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    border: 2px solid #ff08089f;
+    color: rgb(255, 0, 0);
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+
+@media only screen and (max-width: 650px){
+
+    .section-NewProject .form{
+        
+        margin: 30px 10px 30px 10px; 
+        width: 100%;
+        transition: all 0.5s;
+    } 
+    .section-NewProject .form input{        
+        width: 100%;
+        transition: all 0.5s;
+    } 
+  
+}
+
+
+
+/**********************************/
+/**********   Proyectos  **********/
+/**********************************/
+
+.section-Project h5{
+    margin: 20px 8% 10px 8%;
+    color: rgb(170, 170, 170);
+
+}
+.section-Project .container{    
+    margin: 30px;
+    
+}  
+  
+
+/*   Buscar   */
+.section-Project .buscar{
+    margin: 30px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+.section-Project .buscar .inp{
+    padding: 10px 10px 5px 10px;
+    width: 260px;
+    transition: width 0.4s ease-in-out;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    overflow: visible;
+    outline: none;
+    background-image: url('/static/img/home/ICO_buscar.png');
+    background-size: 15px;
+    background-position: 10px 10px;    
+    background-repeat: no-repeat;
+    padding-left: 40px;
+}  
+.section-Project .buscar .inp:focus{
+    width: 75% ;
+    transition: width 0.4s ease-in-out;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.section-Project .button{
+    width: 160px;
+    border-radius: 5px;
+    background: rgb(88, 188, 88);
+    background: #00c9b7;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 10px 5px 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+
+    background-image: url('/static/img/home/ICO_add.png');
+    background-size: 15px;
+    background-position: 10px 10px;    
+    background-repeat: no-repeat;
+}
+.section-Project .button span{
+    font-size: 20px;
+}
+
+.section-Project .button:hover {
+   cursor: pointer;
+} 
+
+@media only screen and (max-width: 800px){
+    .section-Project .buscar{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center; 
+    }
+    .section-Project .buscar .inp{
+        margin: 10px 0;
+        display: inline;
+    }  
+    .section-Project .buscar .inp:focus{
+        width: 100% ;
+    }
+}
+
+
+
+/*   items   */
+
+.itemsProyectos .item{    
+    padding: 10px 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 2px solid rgba(107, 107, 107, 0.05);
+}
+.itemsProyectos a, p{    
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.itemsProyectos #ulProjects{  
+list-style-type: none;
+}
+
+.section-Project .item-1{
+    margin-right: auto;
+    font-size: 20px;
+    font-weight: 700;
+    padding-left: 5%;
+    
+}
+.section-Project .item-2{
+    padding-right: 15px;
+ }
+
+ .section-Project .item-3{
+    
+    display: flex;
+    padding-right: 5%;
+ }
+ 
+
+
+
+/* The switch - the box around the slider */
+.switchFavorites {
+    position: relative;
+    display: inline-block;
+    width: 35px;
+    height: 20px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switchFavorites input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(15px);
+    -ms-transform: translateX(15px);
+    transform: translateX(15px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 10px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.section-Project .not_favorites{
+    height: 20px;
+    width: 20px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    background-color: rgb(170, 170, 170); 
+    margin: auto; 
+}
+.section-Project .not_favorites:hover{
+    background-color: rgb(255, 111, 0); 
+    
+  }
+
+.itemsProyectos .item:hover{  
+    background: rgba(214, 214, 214, 0.2);
+    border-bottom: 0px solid rgba(107, 107, 107, 0.5);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+@media only screen and (max-width: 1000px){
+    .section-Project .container{    
+    margin: 30px;
+}  
+    .itemsProyectos .item{    
+        flex-wrap: wrap;
+    }
+
+    .section-Project .item-1{
+        width: 100%;
+    }
+    .section-Project .item-2{
+        margin-right: auto;
+        padding: 5px;
+        padding-left: 5px;
+    }
+  
+}
+
+
+
+
+
+
+
+
+/**************************************/
+/**********  menu principal  **********/
+/**************************************/
+       
+.section-menu{    
+    
+    width: 100%; 
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 0 30px 0;
+    
+
+
+}
+
+.section-menu .card{
+    width: 250px;
+    height: 150px;
+    border-radius: 2px;
+    border: 1px solid rgba(64, 83, 88, 0.3);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    overflow:hidden;
+    margin: 20px;
+    
+    text-align: left;
+    transition: all 0.25s; 
+    
+}
+
+.section-menu .card-end{
+    margin-bottom: 50px;
+}
+
+
+.section-menu .card a{
+    text-decoration: none;
+}
+
+
+.section-menu .card h4{
+    color:rgb(0, 0, 0);
+    margin-left:  10px;    
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    top: 100px;
+}
+
+.section-menu .card p{
+    
+    color:rgba(75, 83, 87, 1);
+    margin-left:  10px;    
+    font-size: 13px;
+    font-weight: bold;
+    position: relative;
+    top: 100px;
+   
+}
+
+
+.section-menu .card img{
+    position: absolute; 
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.9;
+
+}
+
+
+
+.section-menu .card:hover{    
+    
+    transform: scale(1.01);    
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    font-weight: bold;
+    transform: rotate3d(1, 2.0, 3.0, 2deg);
+    
+
+}
+
+@media only screen and (max-width: 500px){
+    .section-menu{
+        transition: all 1.0s;    
+        top: 350px;
+        left: 0;   
+    } 
+    
+}
+
+
+
+/****************************/
+/*********  FOOTER  *********/
+/****************************/
+
+/*-
+.nav-li-logoImg{   
+    left: 20px;
+}
+.nav-li-logo{ 
+    left: 55px;
+}
+
+
+*/
+
+
+.ocultar{
+    display: none;
+}
