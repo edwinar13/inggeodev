@@ -16,6 +16,7 @@ app.config['SECRET_KEY'] = '8659dgf6584sehy'
 app.config['UPLOAD_FOLDER'] = './Archivos_PDF'
 PORT=5000
 DEBUG=True
+HOST = "0.0.0.0"
 
 
 
@@ -96,4 +97,4 @@ def not_found(error):
 
 
 if __name__ == '__main__':
-    app.run(port=PORT, debug=DEBUG)
+    app.run(host=HOST, port=PORT, debug=DEBUG)
