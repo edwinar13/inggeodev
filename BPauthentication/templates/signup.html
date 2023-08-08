@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<!--
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+-->
+
+<link rel="stylesheet" href="{{ url_for('static',filename='css/signup.css') }}">
+
+
+<div class="section-container">
+
+    <div class="section-signup_card">
+        <h2 class="title">SIGN UP</h2>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="notification is-danger">
+            {{ messages[0] }} - <a href="{{ url_for('authPage.login') }}"> go login ?</a>.
+        </div>
+        {% endif %}
+        {% endwith %}
+
+        <form class="section-signup_form" method="POST" action="/signupPost">
+            <div class="field">
+                <input type="email" name="email" placeholder="Email*" autofocus="">
+            </div>
+
+            <div class="field">
+                <input type="text" name="name" placeholder="Name*" autofocus="">
+            </div>
+
+            <div class="field">
+                <input type="text" name="business" placeholder="business*" autofocus="">
+            </div>
+
+
+
+            <div class="field">
+                <input type="password" name="password" placeholder="Password*">
+            </div>
+
+            <div class="field">
+                <input type="password" name="passwordRepeat" placeholder="Repeat password*">
+
+            </div>
+
+            <div class="field">
+                <input type="text" name="codeConfi" placeholder="Confirmation code*">
+
+            </div>
+
+            <button type="submit">Sign Up</button>
+
+            <a href="/#section-contactenos"><span>you need a confirmation code?</span></a>
+
+        </form>
+    </div>
+</div>
+{% endblock %}

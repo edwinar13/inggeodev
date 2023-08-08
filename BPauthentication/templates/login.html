@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<!--
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+-->
+
+<link rel="stylesheet" href="{{ url_for('static',filename='css/login.css') }}">
+
+
+
+<section class="section-login">
+
+    <div class="section-login_card">
+        <h2 >LOGIN</h2>
+
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="card-notification">
+            {{ messages[0] }}
+        </div>
+        {% endif %}
+        {% endwith %}
+
+      
+        <form class="section-login_form" method="POST" action="/loginPost">
+            <div class="field">
+                <input  type="email" name="email" placeholder="Your Email" autofocus="">
+
+            </div>
+
+            <div class="field">
+                <input  type="password" name="password" placeholder="Your Password">
+
+            </div>
+            
+            <button >Login</button>
+            <div class="field">
+                <a href="#" id="link-password">
+                    <p> Has olvidado la contraseña ? </p>
+                </a>
+            </div>
+
+        </form>
+
+
+    </div>
+
+</section>
+
+
+
+{% endblock %}

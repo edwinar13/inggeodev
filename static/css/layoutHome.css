@@ -1,0 +1,222 @@
+:root{
+    --h_header: 50px;
+}
+
+body{
+    font-family: 'Overpass', sans-serif;
+    scroll-behavior: smooth;  
+}
+
+
+
+/******************************/
+/**********  HEADER  **********/
+/******************************/
+
+
+
+.header{  
+    
+    background-color: rgba(62, 62, 62, 1.0);         
+    height: var(--h_header);
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    border-bottom: 1px solid rgb(92, 92, 92);
+    
+}
+
+.header-content{   
+    margin-left: 50px;
+    margin-right: 50px;
+    height: var(--h_header);
+}
+
+
+
+.nav-li-logoImg{
+    
+    position: absolute;    
+    left: 10px;    
+    padding: 10px 0px 7px 0px;
+    list-style:none;
+    
+}
+.nav-li-logo{
+    
+    position: absolute;    
+    left: 45px;    
+    padding: 4px 0px 6px 0px;
+    list-style:none;
+    
+}
+
+.nav-li-nav{
+    padding: 25px;
+    position: absolute; 
+    left: 250px;
+    list-style:none;
+}
+
+.nav-li-user{
+    padding: 6px 0px 6px 0px;
+    position: absolute;    
+    right: 10px;
+    list-style:none;
+}
+
+
+.nav-a{
+    text-decoration: none;
+    height: 50px;
+    color: rgb(250, 250, 250);
+    margin-left: 15px;
+    font-size: 17px;
+}
+
+.nav-li-logoImg img{
+    width: 30px;
+    height: 30px;
+}
+
+.nav-li-logo a{
+    text-decoration: none;
+}
+
+.nav-li-logo span{
+    color: rgb(187, 211, 171);
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    font-size: 35px;
+    font-weight: 900;
+   
+}
+.nav-li-logo b{
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+}
+
+.nav-li-user .card{
+    height: 35px;    
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    margin: 0 3px 0 3px;
+      
+}
+
+.nav-li-user .logout{ 
+    border: none;
+      
+}
+.nav-a-web{
+    text-decoration: none;    
+    color: rgb(250, 250, 250);
+    margin: 0 5px 0 5px;
+    font-size: 17px;
+}
+
+.btn_menu_header{
+    margin: 0 5px 0 20px;
+    display: none;
+}
+
+
+.nav-li-user .login:hover{
+    background: rgb(97, 97, 97);
+
+}
+.nav-li-user .signup:hover{
+    background: rgb(104, 177, 73);
+}
+
+.nav-li-nav .arrow{
+    height: 100%;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    clip-path: polygon(3% 63%, 2% 74%, 10% 81%, 22% 75%, 50% 46%, 78% 75%, 90% 81%, 98% 74%, 97% 63%, 50% 13%);
+}
+
+.nav-li-nav .expand{
+    height: 10px;
+    width: 10px;
+    display: inline-flex;
+}
+
+.nav-li-nav .expand:hover{
+    transform: rotate(180deg);
+
+}
+
+
+
+@media only screen and (max-width: 950px){
+    .nav-li-nav    {
+        display: none;  
+    }      
+}
+
+@media only screen and (max-width: 550px){
+    .header-content {
+        margin: 0;  
+    }
+    .nav-li-logoImg{       
+        left: 20px;   
+        transition: all 0.5s;          
+    }
+    .nav-li-logo{          
+        left: 55px;    
+        transition: all 0.5s;         
+    }
+    .nav-li-user{    
+        right: 20px;
+        transition: all 0.5s;    
+    }
+
+    .nav-a-web{
+        margin: 0 5px 0 5px;
+        font-size: 15px;
+        transition: all 0.5s;   
+    }
+    
+}
+
+
+/*
+@media only screen and (max-width: 950px){
+    .nav-a-web {
+        display: none;        
+    }
+    .btn_menu_header{
+        display: inline-block;
+    }
+    
+
+    
+}
+@media only screen and (max-width: 550px){
+    .btn_menu_header{
+        display: inline-block;
+    }
+
+    .nav-ini span {
+        display: none;        
+    }
+    
+}
+*/
+
+
+
+
+
+
+
+/******* CONTENT *****
+
+.content{
+    padding-top: var(--h_header);
+}
+*/
+
+

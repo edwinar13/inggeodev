@@ -1,0 +1,135 @@
+<!--
+Revisar estas paginas
+https://ingeneo.com.co/
+https://www.globalbit.co/
+https://fedesoft.org/
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- para que deje actualizar el navegador en proudccion quitar-->
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+
+
+
+    <!-- Pestaña -->
+    <title>inggeodev</title>
+    <link rel="icon" href="../static/img/Logo-1.ico">
+
+    <!-- Fuente -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+
+
+
+
+
+    <!-- Fuente -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/normalize.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/layout.css') }}">
+
+    <!--
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+    -->
+
+</head>
+
+<body>
+
+
+    <!-- header -->
+    <header class="header">
+        <div class="header-content">
+            <nav class=" nav-container">
+                <ul class="nav-ul">
+                           
+                    <li class="nav-li nav-li-logoImg">
+                         <img src="{{ url_for('static',filename='img/Logo-1.ico')  }}" alt="">
+ 
+                     </li>
+ 
+                     <li class="nav-li nav-li-logo">
+                         <a href="{{ url_for('indexPage.index') }}" class="header-logo">
+                             <b class="notranslate">in</b><span class="notranslate">gg</span><b class="notranslate">eodev</b>
+                         </a>
+                     </li>
+ 
+
+
+                    {% if not current_user.is_authenticated %}
+                    <li class="nav-li nav-li-nav">
+
+                        <a class="nav-a" href="/#section-nosotros"> <span>Nosotros</span> </a>
+                        <a class="nav-a services" href="/#section-servicios">
+                            <span>Servicios</span>
+                            <div class="expand">
+                                <div class="arrow"></div>
+                            </div>
+                        </a>
+                        <a class="nav-a" href="/#section-equipo"> <span>Equipo</span> </a>
+                        <a class="nav-a" href="/#section-contactenos"> <span>Contactenos</span> </a>
+
+                        <a href="HTML/login.html"><span class="btn_menu_header">•••</span></a>
+                    </li>
+                    {% endif %}
+                    <li class="nav-li nav-li-user">
+                        {% if current_user.is_authenticated %}
+                        <a href="{{ url_for('appPage.home') }}" class="nav-a-web">
+                            Home
+                        </a>
+                        {% endif %}
+                        {% if not current_user.is_authenticated %}
+                        <div class="card login">
+
+                            <a href="{{ url_for('authPage.login') }}" class="nav-a-web">
+                                Login
+                            </a>
+
+                        </div>
+                        {% endif %}
+                        {% if not current_user.is_authenticated %}
+                        <div class="card signup">
+                            <a href="{{ url_for('authPage.signup') }}" class="nav-a-web">
+                                Sign Up
+                            </a>
+                        </div>
+                        {% endif %}
+                        {% if current_user.is_authenticated %}
+                        <div class="card logout">
+                            <a href="{{ url_for('authPage.logout') }}" class="nav-a-web ">
+                                Logout
+                            </a>
+                        </div>
+                        {% endif %}
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+
+    {% block content %}
+    {% endblock %}
+
+
+
+
+
+
+</body>
+
+</html>
